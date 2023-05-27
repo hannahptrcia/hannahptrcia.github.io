@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Oswald:wght@700&family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bantuan.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'>
+
+    <!-- js keluar -->
+    <script>
+      function logout(){
+        let text = "Apakah anda yakin untuk keluar?";
+        if (confirm(text) == true){
+          location.replace("index.html")
+        }
+        else{
+          location.replace("bantuan.html")
+        }
+      }
+    </script>
+
+    <title>Bantuan</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <h1 align="center">SiPinang</h1>
+      <p align="center">Sistem Informasi Peminjaman Ruangan</p>
+    </div>
+    <!-- akhir header -->
+
+    <!-- navbar -->
+    <div class="nav">
+    <div class="navbar">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="pinjam-ruang.html">Peminjaman</a></li>
+        <li><a href="bantuan.html" >Bantuan</a></li>
+      </ul>
+      <a class="action_btn" onclick="logout()">Keluar</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="pinjam-ruang.html">Peminjaman</a></li>
+        <li><a href="bantuan.html">Bantuan</a></li>
+        <li><a class="action_btn" onclick="logout()">Keluar</a></li>
+    </div>
+  </div>
+    <!-- akhir navbar -->
+
+    <div class="bantuan">
+    <section>
+      <h2 class="title">FaQs</h2>
+      <p class="faqtitle">Frequently Asked Questions</p>
+
+      <div class="faq">
+        <div class="question">
+          <h3>Mengapa menggunakan website SiPinang?</h3>
+
+          <svg width="15" height="10" viewBox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>SiPinang merupakan singkatan dari Sistem Informasi Peminjaman Ruangan merupakan website yang dapat membantu para mahasiswa atau dosen untuk memudahkan dalam peminjaman ruangan kampus. Website ini mengganti peminjaman ruangan secara manual sehingga fasilitas peminjaman ruangan dapat berjalan dengan efektif dan efisien.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>Bagaimana cara untuk meminjam ruangan?</h3>
+
+          <svg width="15" height="10" viewBox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>Login melalui website SiPinang, lalu masuk ke menu Peminjaman. Pada menu ini, isi form pendaftaran ruangan lalu submit form tersebut. Jika sudah, tunggu sampai status peminjaman diterima. </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>Apakah setelah mengisi formulir peminjaman dapat langsung menggunakan ruangannya?</h3>
+
+          <svg width="15" height="10" viewBox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>Tidak. Setelah mengisi formulir peminjaman, ruangan akan diverifikasi oleh admin sehingga pengguna harus menunggu sampai status peminjaman diterima.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>Bagaimana jika status peminjaman ditolak?</h3>
+
+          <svg width="15" height="10" viewBox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>Jika status peminjaman ditolak, pengguna harus mengisi formulir ulang. Pastikan memilih ruangan yang berbeda karena kemungkinan status peminjaman ditolak karena ruangan yang sebelumnya dipilih sudah dipakai. </p>
+        </div>
+      </div>
+    </section>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2023 by Hannah Patricia</p>
+    </footer>
+
+  </body>
+  <script src="js/bantuan.js"></script>
+  <script src="js/navbar.js"></script>
+</html>

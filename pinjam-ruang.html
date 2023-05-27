@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- css -->
+    <link rel="stylesheet" href="pinjam-ruang.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Oswald:wght@700&family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'>
+    <!-- Iconscout CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Pinjam Ruangan</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <h1 align="center">SiPinang</h1>
+      <p align="center">Sistem Informasi Peminjaman Ruangan</p>
+    </div>
+    <!-- akhir header -->
+
+    <!-- navbar -->
+    <div class="nav">
+    <div class="navbar">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="pinjam-ruang.html">Peminjaman</a></li>
+        <li><a href="bantuan.html" >Bantuan</a></li>
+      </ul>
+      <a class="action_btn" onclick="logout()">Keluar</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="pinjam-ruang.html">Peminjaman</a></li>
+        <li><a href="bantuan.html">Bantuan</a></li>
+        <li><a class="action_btn" onclick="logout()">Keluar</a></li>
+    </div>
+  </div>
+    <!-- akhir navbar -->
+    <br>
+    <!-- form peminjaman -->
+    <div class="container">
+      <h2>Silahkan Isi Form untuk Pinjam Ruangan!!</h2>
+      <form action="#">
+        <div class="form first">
+        <div class="fields">
+          <div class="input-field">
+            <label>NIM</label>
+            <input type="text" placeholder="Masukkan NIM" required>
+          </div>
+          <div class="input-field">
+            <label>Nama</label>
+            <input type="text" placeholder="Masukkan Nama" required>
+          </div>
+          <div class="input-field">
+            <label>Hari dan Tanggal</label>
+            <input type="date" placeholder="Masukkan Hari dan Tanggal" required>
+          </div>
+          <div class="input-field">
+            <label>Ruangan</label>
+            <select required>
+                <option disabled selected>Pilih Ruangan</option>
+                <option>Ruang 01</option>
+                <option>Ruang 02</option>
+                <option>Ruang 04</option>
+                <option>Ruang 05</option>
+                <option>Ruang 06</option>
+                <option>Ruang 07</option>
+                <option>Ruang 08</option>
+                <option>Ruang 09</option>
+                <option>Ruang 10</option>
+                <option>Ruang 11</option>
+                <option>Ruang 12</option>
+                <option>Ruang 13</option>
+                <option>Ruang 14</option>
+                <option>Ruang 15</option>
+                <option>Ruang 16</option>
+                <option>Ruang 17</option>
+                <option>Ruang 18</option>
+                <option>Ruang 19</option>
+                <option>Ruang 20</option>
+                <option>Ruang 21</option>
+                <option>Ruang 22</option>
+                <option>Ruang 23</option>
+                <option>Ruang 24</option>
+                <option>Ruang 25</option>
+                <option>Ruang 26</option>
+                <option>Ruang 27</option>
+                <option>Ruang 28</option>
+                <option>Ruang 29</option>
+                <option>Ruang 30</option>
+            </select>
+        </div>
+            <div class="input-field">
+              <label>Waktu Mulai</label>
+              <input type="time" placeholder="Waktu Mulai" required>
+            </div>
+            <div class="input-field">
+              <label>Waktu Selesai</label>
+              <input type="time" placeholder="Waktu Selesai" required>
+            </div>
+            
+          <div class="input-field">
+            <label>Dosen</label>
+            <input type="text" placeholder="Masukkan Dosen" required>
+          </div>
+          <div class="input-field">
+            <label>Mata Kuliah</label>
+            <input type="text" placeholder="Masukkan Matkul" required>
+          </div>
+          <div class="input-field">
+            <label>Keterangan</label>
+            <input type="text" placeholder="Masukkan Keterangan" required>
+          </div>
+          
+        </div>
+        <div class="buttons">
+          <input type="reset" value="Reset">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+      </form>
+    </div>
+    <br>
+    <!-- akhir form peminjaman -->
+    <footer>
+      <p>Copyright &copy; 2023 by Hannah Patricia</p>
+    </footer>
+    <!-- javascript keluar -->
+    <script>
+      function logout(){
+        let text = "Apakah anda yakin untuk keluar?";
+        if (confirm(text) == true){
+          location.replace("index.html")
+        }
+        else{
+          location.replace("pinjam-ruang.html")
+        }
+      }
+    </script>
+      <script src="js/navbar.js"></script>
+  </body>
+</html>

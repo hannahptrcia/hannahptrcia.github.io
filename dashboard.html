@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Oswald:wght@700&family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'>
+
+    <!-- js keluar -->
+    <script>
+      function logout(){
+        let text = "Apakah anda yakin untuk keluar?";
+        if (confirm(text) == true){
+          location.replace("index.html")
+        }
+        else{
+          location.replace("dashboard.html")
+        }
+      }
+    </script>
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+<!-- header -->
+<div class="header">
+  <h1 align="center">SiPinang</h1>
+  <p align="center">Sistem Informasi Peminjaman Ruangan</p>
+</div>
+<!-- akhir header -->
+
+<!-- navbar -->
+<div class="nav">
+<div class="navbar">
+  <ul class="links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="pinjam-ruang.html">Peminjaman</a></li>
+    <li><a href="bantuan.html" >Bantuan</a></li>
+  </ul>
+  <a class="action_btn" onclick="logout()">Keluar</a>
+  <div class="toggle_btn">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+</div>
+<div class="dropdown_menu">
+  <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="pinjam-ruang.html">Peminjaman</a></li>
+    <li><a href="bantuan.html">Bantuan</a></li>
+    <li><a class="action_btn" onclick="logout()">Keluar</a></li>
+</div>
+</div>
+<!-- akhir navbar -->
+
+
+    <div class="content">
+      <!-- cards -->
+      <div class="cards">
+        <div class="card">
+        <div class="box">
+          <h3>Jumlah Kelas</h3>
+          <h2>30</h2>
+        </div>
+        <div class="icon-case">
+          <img src="img/presentation.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <h3>Jumlah Pendaftar</h3>
+          <h2>250</h2>
+        </div>
+        <div class="icon-case">
+          <img src="img/graduated.png">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box">
+          <h3>Kelas Tersedia</h3>
+          <h2>25</h2>
+        </div>
+        <div class="icon-case">
+          <img src="img/knowledge.png">
+        </div>
+      </div>
+      <div class="card">
+
+        <div class="box">
+          <h3>Kelas Terpakai</h3>
+          <h2>5</h2>
+        </div>
+        <div class="icon-case">
+          <img src="img/webinar.png">
+        </div>
+      </div>
+      </div>
+      <!-- akhir cards -->
+      <div class="content-2">
+        <div class="status-peminjaman">
+          <div class="title">
+            <h2>Status Peminjaman</h2>
+          </div>
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Ruang</th>
+              <th>Tanggal</th>
+              <th>Mulai</th>
+              <th>Akhir</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>246890</td>
+              <td>Ruang 05</td>
+              <td>18 Mei 2023</td>
+              <td>07:30</td>
+              <td>10:00</td>
+              <td>Dibatalkan</td>
+            </tr>
+            <tr>
+              <td>123456</td>
+              <td>Ruang 07</td>
+              <td>15 Juni 2023</td>
+              <td>13:00</td>
+              <td>15:30</td>
+              <td>Diproses</td>
+            </tr>
+          </table>
+        </div>
+        <div class="kelas-tersedia">
+          <div class="title">
+            <h2>Ruangan Tersedia</h2>
+          </div>
+          <p>Ruang 01</p>
+          <p>Ruang 02</p>
+          <p>Ruang 04</p>
+          <p>Ruang 05</p>
+          <p>Ruang 06</p>
+          <p>Ruang 07</p>
+          <p>Ruang 08</p>
+          <p>Ruang 09</p>
+          <p>Ruang 10</p>
+          <p>Ruang 11</p>
+          <p>Ruang 12</p>
+          <p>Ruang 13</p>
+          <p>Ruang 14</p>
+          <p>Ruang 15</p>
+          <p>Ruang 16</p>
+          <p>Ruang 17</p>
+          <p>Ruang 18</p>
+          <p>Ruang 19</p>
+          <p>Ruang 20</p>
+          <p>Ruang 21</p>
+          <p>Ruang 22</p>
+          <p>Ruang 23</p>
+          <p>Ruang 24</p>
+          <p>Ruang 25</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2023 by Hannah Patricia</p>
+    </footer>
+  </body>
+  <script src="js/navbar.js"></script>
+</html>

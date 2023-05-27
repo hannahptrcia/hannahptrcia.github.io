@@ -1,0 +1,231 @@
+/* header */
+.header{
+    background-color: rgb(46, 45, 45);
+    color:white;
+    padding: 45px;
+}
+.header h1{
+    margin-bottom: 10px;
+    font-family: Josefin Sans;
+    font-size: 32px;
+}
+/* navbar */
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+a:hover{
+    border-bottom: 3px solid black;
+}
+.nav{
+    position: relative;
+    padding: 0 16px;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .links{
+    display: flex;
+    gap: 32px;
+}
+.navbar .toggle_btn{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:none;
+    position: absolute;
+    left:90%;
+}
+.action_btn{
+    background-color: blue;
+    color:#fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease ;
+}
+.action_btn:hover{
+    scale: 1.05;
+    color:#fff;
+}
+.action_btn:active{
+    scale:0.95;
+}
+/* dropdown */
+.dropdown_menu{
+    display: none;
+    right:32px;
+    top:60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li{
+    padding:0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* cards */
+.content{
+    position: relative;
+    margin-top:10px;
+    min-height: 90vh;
+}
+.content .cards{
+    padding:20px 25px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.content .cards .card{
+    width:250px;
+    height: 200px;
+    background: white;
+    margin: 20px 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h2{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+h3{
+    text-align: center;
+}
+img{
+    height: 70px;
+    width: 70px;
+}
+.content .content-2{
+    margin-top: 30px;
+    min-height: 60vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.content .content-2 .kelas-tersedia{
+    min-height: 50vh;
+    flex:3;
+    background: white;
+    margin: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 200px;
+    overflow-y: scroll;
+}
+.content .content-2 .kelas-tersedia p{
+    margin-top: 15px;
+    text-align: center;
+}
+.content .content-2 .status-peminjaman{
+    flex: 3;
+    background: white;
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+}
+table{
+    padding: 10px;
+}
+th, td{
+    text-align: left;
+    padding: 8px;
+}
+
+/* footer */
+
+footer p{
+    text-align: center;
+    color: #acacac;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+@media (min-width:992px){
+    .content .content-2{
+        margin-top: 30px;
+        min-height: 60vh;
+        display:flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .content .cards .card{
+        width:250px;
+        height: 200px;
+        background: white;
+        margin: 20px 10px;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .content .content-2 .kelas-tersedia{
+        min-height: 50vh;
+        flex:1;
+        background: white;
+        margin: 0 25px 25px 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        height: 200px;
+        overflow-y: scroll;
+    } 
+}
+@media (max-width:992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+        left:2rem;
+        width: unset;
+    }
+    
+}
