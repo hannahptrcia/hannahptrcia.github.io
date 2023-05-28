@@ -34,16 +34,16 @@
             </div>
 
             <div class="field input-field">
-                <input type ="password" placeholder="Password" class ="password" name="password" required>
+                <input type ="password" placeholder="Password" class ="password" name="password" id="pswd" required>
                 <i class='bx bx-hide eye-icon'></i>
             </div>
 
             <div class="field input-field">
-                <input type ="password" placeholder="Konfirmasi Password" class ="password" name="password" required>
+                <input type ="password" placeholder="Konfirmasi Password" class ="password" name="password" id="pswd" required>
                 <i class='bx bx-hide eye-icon'></i>
             </div>
 
-            <a style="text-decoration: none;" class="button" href="login.html" onclick="validateform()">Sign Up</a>
+            <a style="text-decoration: none;" class="button" href="#" onclick="validateform()">Sign Up</a>
 
             <div class="form-link">
                 <span>Sudah punya akun? <a href="login.html" >Login</a></span>
@@ -55,11 +55,22 @@
   </body>
   <script>
     function validateform(){ 
-      var password=document.myform.password.value;  
+      var pw = document.getElementById("pswd").value;
 
-      if(password.length<6){  
-        alert("Password must be at least 6 characters long.");   
-      }  
+      if(pw == ""){
+        alert("Password tidak boleh kosong!");
+        window.location.href = "#";
+        return false;
+      }
+      if(pw.length < 6){
+        alert("Password harus terdiri lebih dari 6 karakter!");
+        window.location.href = "#";
+        return false;
+      }
+      else{
+        alert("Success!");
+        window.location.href = "login.html"
+      }
     } 
   </script>
   <script src="js/login.js"></script>
