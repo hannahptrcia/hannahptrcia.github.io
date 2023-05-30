@@ -177,6 +177,9 @@ form .buttons{
 form .buttons button{
     margin-left: 14px;
 }
+body{
+    background-color: #eeeeee;
+}
 footer p{
     text-align: center;
     color: #acacac;

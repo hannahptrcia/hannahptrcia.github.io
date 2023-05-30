@@ -150,6 +150,9 @@ section{
 svg{
     transition: transform 0.5s ease-in;
 }
+body{
+    background-color: #eeeeee;
+}
 footer p{
     text-align: center;
     color: #acacac;
